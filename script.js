@@ -17,47 +17,51 @@ if (playGame) {
           (randomNum = Math.floor(Math.random() * options.length) + 1)
         ];
       }
+
       function playRound(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
-          return prompt(`It is a tie! The score is ${playerScore}:${computerScore}`);
+          computerScore++;
+          playerScore++;
+          prompt(`It is a tie! The score is ${playerScore}:${computerScore}`);
+        } else if (playerSelection == "paper") {
+          if (computerSelection == "scissors") {
+            computerScore++;
+            prompt(
+              `You lose! Scissors beats Paper! The score is ${playerScore}:${computerScore}.`
+            );
+          } else if (computerSelection == "Rock") {
+            playerScore++;
+            prompt(
+              `You won! Paper beats Rock! The score is ${playerScore}:${computerScore}.`
+            );
+          }
         } else if (playerSelection == "rock") {
           if (computerSelection == "paper") {
             computerScore++;
             prompt(
-              `You Lose! Paper beats Rock. The score is ${playerScore}:${computerScore}.`
+              `You lose! Paper beats Rock! The score is ${playerScore}:${computerScore}.`
             );
-          } else {
+          } else if (computerSelection == "scissors") {
             playerScore++;
             prompt(
-              `You Won! Rock beats Scissors. The score is ${playerScore}:${computerScore}.`
-            );
-          }
-        } else if (playerSelection == "paper") {
-          if (computerSelection == "rock") {
-            playerScore++;
-            prompt(
-              `You Won! Paper beats Rock. The score is ${playerScore}:${computerScore}."`
-            );
-          } else {
-            computerScore++;
-            prompt(
-              `You Lose! Scissors beats Paper. The score is ${playerScore}:${computerScore}.`
+              `You won! Rock beats Scissors! The score is ${playerScore}:${computerScore}.`
             );
           }
         } else if (playerSelection == "scissors") {
           if (computerSelection == "rock") {
             computerScore++;
             prompt(
-              `You Lose! Rock beats Scissors. The score is ${playerScore}:${computerScore}.`
+              `You lose! Rock beats Scissors! The score is ${playerScore}:${computerScore}.`
             );
-          } else {
+          } else if (computerSelection == "paper") {
             playerScore++;
             prompt(
-              `You Won! Scissors beats Paper. The score is ${playerScore}:${computerScore}.`
+              `You won! Paper beats Scissors! The score is ${playerScore}:${computerScore}.`
             );
           }
         }
       }
+
       function game() {
         for (let i = 0; i < 5; i++) {
           playRound(playerSelection, computerPlay());
