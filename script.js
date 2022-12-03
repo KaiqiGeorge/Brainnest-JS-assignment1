@@ -19,9 +19,7 @@ if (playGame) {
       }
       function playRound(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
-          return prompt(
-            `It is a tie! The score is ${playerScore}:${computerScore}`
-          );
+          prompt(`It is a tie! The score is ${playerScore}:${computerScore}`);
         } else if (playerSelection == "rock") {
           if (computerSelection == "paper") {
             computerScore++;
@@ -64,15 +62,15 @@ if (playGame) {
         for (let i = 0; i < 5; i++) {
           playRound(playerSelection, computerPlay());
         }
-        if (playerScore >computerScore) {
-            return alert(
-              `Game Over! You Won! The final score is ${playerScore} :${computerScore}`
-            );
-          }else{
-            return alert(
-              `Game Over! You Lose! The final score is ${playerScore} :${computerScore}`
-            );
-          }
+        if (playerScore > computerScore) {
+          return alert(
+            `Game Over! You Won! The final score is ${playerScore} :${computerScore}`
+          );
+        } else {
+          return alert(
+            `Game Over! You Lose! The final score is ${playerScore} :${computerScore}`
+          );
+        }
       }
       game();
     } else {
