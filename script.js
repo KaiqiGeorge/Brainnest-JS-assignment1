@@ -19,7 +19,7 @@ if (playGame) {
       }
       function playRound(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
-          prompt(`It is a tie! The score is ${playerScore}:${computerScore}`);
+          return prompt(`It is a tie! The score is ${playerScore}:${computerScore}`);
         } else if (playerSelection == "rock") {
           if (computerSelection == "paper") {
             computerScore++;
