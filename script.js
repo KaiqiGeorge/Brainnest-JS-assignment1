@@ -12,7 +12,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == "paper" ||playerSelection == "rock" || playerSelection == "scissors") {
+  if (playerSelection == "paper" || playerSelection == "rock" || playerSelection == "scissors") {
     if (playerSelection == computerSelection) {
       computerScore++;
       playerScore++;
