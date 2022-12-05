@@ -56,9 +56,8 @@ function playRound(playerSelection, computerSelection) {
       }
     }
   } else {
-    prompt(
-      "You didn't input a valid option. Please enter 'paper','scissors' or 'rock'."
-    );
+    alert("You didn't enter a valid option! Please try it again.");
+    prompt("Please enter 'paper','scissors' or 'rock'.")
   }
 }
 
