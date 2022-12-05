@@ -1,5 +1,5 @@
 alert("Welcome to the Paper, Scissors and Rock game!");
-alert("You will be playing 3 rounds, it will show the result each round. If you won or it is a tie, you get one point. Final score will show in the end.");
+alert("You will be playing 5 rounds, it will show the result each round. If you won or it is a tie, you get one point. Final score will show in the end.");
 alert("Are you ready? Let's get it started :)");
 let computerScore = 0;
 let playerScore = 0;
@@ -52,12 +52,13 @@ function playRound(playerSelection, computerSelection) {
         prompt(
           `You won! Paper beats Scissors! The score is ${playerScore}:${computerScore}.`
         );
-        playRound();
       }
     }
   } else {
-    alert("You didn't enter a valid option! Please try it again.");
-    prompt("Please enter 'paper','scissors' or 'rock'.")
+    alert("You didn't enter a valid option! Please try it again!");
+    prompt("Please enter 'paper','scissors' or 'rock'.");
+   
+
   }
 }
 
