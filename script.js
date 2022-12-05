@@ -23,7 +23,7 @@ function playRound(playerSelection, computerSelection) {
         prompt(
           `You lose! Scissors beats Paper! The score is ${playerScore}:${computerScore}.`
         );
-      } else if (computerSelection == "Rock") {
+      } else{
         playerScore++;
         prompt(
           `You won! Paper beats Rock! The score is ${playerScore}:${computerScore}.`
@@ -35,7 +35,7 @@ function playRound(playerSelection, computerSelection) {
         prompt(
           `You lose! Paper beats Rock! The score is ${playerScore}:${computerScore}.`
         );
-      } else if (computerSelection == "scissors") {
+      } else {
         playerScore++;
         prompt(
           `You won! Rock beats Scissors! The score is ${playerScore}:${computerScore}.`
@@ -47,18 +47,18 @@ function playRound(playerSelection, computerSelection) {
         prompt(
           `You lose! Rock beats Scissors! The score is ${playerScore}:${computerScore}.`
         );
-      } else if (computerSelection == "paper") {
+      } else {
         playerScore++;
         prompt(
           `You won! Paper beats Scissors! The score is ${playerScore}:${computerScore}.`
         );
+        playRound();
       }
     }
   } else {
     prompt(
       "You didn't input a valid option. Please enter 'paper','scissors' or 'rock'."
     );
-    playRound();
   }
 }
 
